@@ -49,7 +49,7 @@ dev_sda1.size = 30
 bdm = boto.ec2.blockdevicemapping.BlockDeviceMapping()
 bdm['/dev/sda1'] = dev_sda1
 
-o1 = conn.run_instances('ami-a1d531d9', user_data=user_data_script,  instance_type='t2.large', security_groups=[sg_name] , key_name= key_pairs_arr[0],  block_device_map = bdm)
+o1 = conn.run_instances('ami-ba27c3c2', user_data=user_data_script,  instance_type='t2.large', security_groups=[sg_name] , key_name= key_pairs_arr[0],  block_device_map = bdm)
 
 print o1
 print "Go to your EC2 console, you should see the Benuku box loading. Happy coding!"
